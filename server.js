@@ -14,7 +14,15 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-  res.send('Ariticle One will be shown here');
+  res.send('Ariticle ONE will be shown here');
+});
+
+app.get('/article-two', function (req, res) {
+  res.send('Ariticle TWO will be shown here');
+});
+
+app.get('/article-three', function (req, res) {
+  res.send('Ariticle THREE will be shown here');
 });
 
 app.get('/ui/madi.png', function (req, res) {
