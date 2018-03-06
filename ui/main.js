@@ -6,3 +6,4 @@ var img = document.getElementById("mod");
 img.onclick = function(){
     img.style.marginleft="100px";
 };
+ 
