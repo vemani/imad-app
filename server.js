@@ -5,14 +5,36 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles = {
+articleOne: {
   title: 'Article ONE  | Mani',
   heading: 'Article ONE',
-  date: '3 March 2018',
+  date: '1 March 2018',
   content: `
         <p>This ia new article written by me...ha.. ha..That is a fantastic experience..I am using Javascript and JQUERY in this one.....One  </p>  
         <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Two   </p>  
         <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Three   </p> `
+},
+
+articleTwo: {
+  title: 'Article TWO  | Mani',
+  heading: 'Article TWO',
+  date: '2 March 2018',
+  content: `
+        <p>This ia Article TWO written by me...ha.. ha..That is a fantastic experience..I am getting more confident....</p>  
+        <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Two   </p>  
+        <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Three   </p> `
+},
+articleThree: {
+  title: 'Article THREE  | Mani',
+  heading: 'Article THREE',
+  date: '3 March 2018',
+  content: `
+        <p>This ia new Article THREE written by me...ha.. ha..That is a fantastic experience..I am conversant now....</p>  
+        <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Two   </p>  
+        <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Three   </p> `
+}
+
 };
 
 function createTemplate(data) {
@@ -67,11 +89,13 @@ app.get('/article-one', function (req, res) {
 });
 
 app.get('/article-two', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+//   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+    res.send(createTemplate(articleTwo));
 });
 
 app.get('/article-three', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+  // res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+    res.send(createTemplate(articleThree));  
 });
 
 app.get('/ui/madi.png', function (req, res) {
