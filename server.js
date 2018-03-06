@@ -51,8 +51,8 @@ var htmlTemplate = `
     </div> 
 </body>
 
-</html>
-`;
+</html>`
+;
 return htmlTemplate;
 }
 
