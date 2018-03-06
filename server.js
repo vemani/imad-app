@@ -10,7 +10,7 @@ var articleOne = {
   heading: 'Article ONE',
   date: '3 March 2018',
   content: `
-             <p>This ia new article written by me...ha.. ha..That is a fantastic experience...One  
+             <p>This ia new article written by me...ha.. ha..That is a fantastic experience..I am using Javascript and JQUERYin this one.....One  
              </p>  
              <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Two  
              </p>  
@@ -53,11 +53,8 @@ var htmlTemplate = `
 
 </html>
 `;
+return htmlTemplate;
 }
-
-
-
-
 
 
 app.get('/', function (req, res) {
@@ -69,7 +66,8 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+//   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+   res.send(createTemplate(articleOne));
 });
 
 app.get('/article-two', function (req, res) {
