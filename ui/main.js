@@ -1,3 +1,3 @@
 console.log('Loaded!');
-var elm = document.getElementById("maintxt")
-elm.innerHTML = "New Txt";
+var element = document.getElementById("maintxt");
+element.innerHTML = "New Txt";
