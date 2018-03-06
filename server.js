@@ -10,13 +10,9 @@ var articleOne = {
   heading: 'Article ONE',
   date: '3 March 2018',
   content: `
-             <p>This ia new article written by me...ha.. ha..That is a fantastic experience..I am using Javascript and JQUERYin this one.....One  
-             </p>  
-             <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Two  
-             </p>  
-             <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Three  
-             </p>  
-             `
+        <p>This ia new article written by me...ha.. ha..That is a fantastic experience..I am using Javascript and JQUERYin this one.....One  </p>  
+        <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Two   </p>  
+        <p>This ia new article written by me...ha.. ha..That is a fantastic experience...Three   </p> `
 };
 
 function createTemplate(data) {
