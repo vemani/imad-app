@@ -27,10 +27,8 @@
                 <br/>
                 <input type="text" id="name" placeholder="Name"></input>
                 <inputer type="submit" name="submit" id="submit_btn"></input>
-                <ul>
-                    <li>Name1</li>
-                    <li>Name2</li>
-                    <li>Name3</li>
+                <ul id=''namelist>
+                    
                 </ul>
             </div>
        </div>
@@ -71,14 +69,15 @@ var submit = document.getElementById('submit_btn');
 
 submit.onclick = function () {
   // make a request to server and send name
-  
+  // capture list of names and render as list
   var names = ['Neela1','Neela2','Neela3','Neela4'];
   var list ='';
   for (var i=0; i<names.length; i++){
       list += '<li>'+ names[i] +'</li>'
       
   }
-  // capture list of names and render as list
+  var ul = document.getElementById('namelist');
+  ul.innerHTML = list;
   
   
 };
