@@ -26,7 +26,7 @@
                 
                 <br/>
                 <input type="text" id="name" placeholder="Name"></input>
-                <inputer type="submit" name="submit"></input>
+                <inputer type="submit" name="submit" id="submit_btn"></input>
                 <ul>
                     <li>Name1</li>
                     <li>Name2</li>
@@ -63,6 +63,26 @@ request.open('GET', 'http://vemani.imad.hasura-app.io/counter', true);
 request.send(null);
 
 };
+//Get Name Input
+
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var submit = document.getElementById('submit_btn');
+
+submit.onclick = function () {
+  // make a request to server and send name
+  
+  var names = ['Neela1','Neela2','Neela3','Neela4'];
+  var list ='';
+  for (var i=0; i<names.length; i++){
+      list += '<li>'+ names[i] +'</li>'
+      
+  }
+  // capture list of names and render as list
+  
+  
+};
+
 
     </script>
     </body>
